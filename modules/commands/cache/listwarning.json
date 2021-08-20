@@ -1,0 +1,55 @@
+{
+    "100011111255977": {
+        "warningLeft": 2,
+        "warningReason": [
+            "test"
+        ],
+        "banned": false
+    },
+    "100005241186652": {
+        "warningLeft": 0,
+        "warningReason": [
+            "dume",
+            "cc",
+            "cc"
+        ],
+        "banned": true
+    },
+    "100040883932859": {
+        "warningLeft": 0,
+        "warningReason": [
+            "@Phạm Huy spam",
+            "spam",
+            "chửi tao🤬"
+        ],
+        "banned": true
+    },
+    "100054375879995": {
+        "warningLeft": 2,
+        "warningReason": [
+            "spam"
+        ],
+        "banned": false
+    },
+    "100035585384565": {
+        "warningLeft": 2,
+        "warningReason": [
+            "spam"
+        ],
+        "banned": false
+    },
+    "100034629883452": {
+        "warningLeft": 2,
+        "warningReason": [
+            "ngôn từ xúc phạm"
+        ],
+        "banned": false
+    },
+    "100068604761100": {
+        "warningLeft": 2,
+        "warningReason": [
+            "spam"
+        ],
+        "banned": false
+    }
+}
