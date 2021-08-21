@@ -1,7 +1,7 @@
 ﻿module.exports.config = {
 	name: "checktt",
 	version: "1.0.5",
-	hasPermssion: 0,
+	hasPermssion: 1,
 	credits: "Mirai Team",
 	description: "Kiểm tra lượt tương tác trong nhóm",
 	commandCategory: "Box-chat",
