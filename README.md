@@ -1,4 +1,4 @@
-# SunmiraiV2
+# SunV2
 CHẠY MỘT CHÚ BOT MIRAIV2 CHO RIÊNG BẠN
 
 # Tips
