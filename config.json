@@ -4,13 +4,15 @@
     "DeveloperMode": false,
     "autoCreateDB": true,
     "allowInbox": true,
-    "autoClean": false,
-    "commandDisabled": [],
+    "autoClean": true,
+    "commandDisabled": [
+        "linkword.js"
+    ],
     "eventDisabled": [],
     "EMAIL": "",
     "PASSWORD": "",
     "OTPKEY": "",
-    "BOTNAME": "Sun",
+    "BOTNAME": "𝘽𝙤𝙩 𝙤𝙛 𝘾𝙖𝙡𝙡𝙢𝙚𝙎𝙪𝙣",
     "PREFIX": "/",
     "ADMINBOT": [
         "100017608866967"
@@ -26,7 +28,7 @@
         "listenEvents": true,
         "pauseLog": true,
         "logLevel": "error",
-        "selfListen": false,
+        "selfListen": true,
         "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36"
     },
     "version": "1.2.14",
@@ -35,7 +37,7 @@
     },
     "daily": {
         "cooldownTime": 43200000,
-        "rewardCoin": 5000
+        "rewardCoin": 500
     },
     "menu": {
         "autoUnsend": true,
@@ -82,7 +84,7 @@
         "bitlyAPI": ""
     },
     "sim": {
-        "APIKEY": "TEST2208"
+        "APIKEY": "MEWc3VuOTQzO3RoaWVubGUwOTA0QGdtYWlsLmN"
     },
     "log": {
         "enable": true
@@ -97,7 +99,7 @@
         "cooldownTime": 1200000
     },
     "linkword": {
-        "APIKEY": ""
+        "APIKEY": "MEWc3VuOTQzO3RoaWVubGUwOTA0QGdtYWlsLmN"
     },
     "nameJP": {
         "APIKEY": "mi451266190"
