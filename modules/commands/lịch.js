@@ -1,54 +1,24 @@
-﻿module.exports.config = {
-	name: "lịch", // Tên lệnh, được sử dụng trong việc gọi lệnh
-	version: "1.0.0", // phiên bản của module này
-	hasPermssion: 0/1/2, // Quyền hạn sử dụng, với 0 là toàn bộ thành viên, 1 là quản trị viên trở lên, 2 là admin/owner
-	credits: "BerVer", // Công nhận module sở hữu là ai
-	description: "Kiểm ra lịch", // Thông tin chi tiết về lệnh
-	commandCategory: "Khác", // Thuộc vào nhóm nào
-	usages: "lịch", // Cách sử dụng lệnh
-	cooldowns: 5, // Thời gian một người có thể lặp lại lệnh
-	dependencies: {
-		"amlich":"",
-		"node-fetch":""
-		} //Liệt kê các package module ở ngoài tại đây để khi load lệnh nó sẽ tự động cài!
-	// Info là phần chi tiết thêm của cách sử dụng lệnh
-	// Key: Từ khoá thuộc trong usages
-	// prompt: Chi tiết dữ liệu đầu vào của key
-	// type: Định dạng dữ liệu đầu vào của key
-	// example: Ví dụ ¯\_(ツ)_/¯ 
+module.exports.config = {
+ name: "lịch",
+ version: "1.0.0",
+ hasPermssion: 0,
+ credits: "Jukie~",
+ description: "xem lịch",
+ commandCategory: "Tiện ích",
+ usages: "",
+ cooldowns: 5
 };
 
-module.exports.run = async({ api, event, args }) =>{
-	//Làm cái gì ở đây tuỳ thuộc vào bạn ¯\_(ツ)_/¯
-    const fetch = global.nodemodule["node-fetch"];
-    var fetchcd = await fetch("https://raw.githubusercontent.com/HerokeyVN/API_Ca_Dao/main/CaDao.js")
-    var jsoncd =  await fetchcd.json()
-var d = new Date();
-var dd = d.getDate()-1
-var yyyy = d.getFullYear()
-var mm = d.getMonth()+1
-var zone = 0 
-var h = d.getHours()
-var m = d.getMinutes()
-var s = d.getSeconds()
-var ms = d.getMilliseconds()
-var name = (await api.getUserInfo(event.senderID))[event.senderID].name;
- 
-// thứ ngày
-var day = d.getDay()
-if (day == 0) {day = "Chủ nhật"}
-if (day == 1) {day = "Thứ hai"}
-if (day == 2) {day = "Thứ ba"}
-if (day == 3) {day = "Thứ tư"}
-if (day == 4) {day = "Thứ Năm"}
-if (day == 5) {day = "Thứ sáu"}
-if (day == 6) {day = "Thứ bảy"}
-const amlich = global.nodemodule['amlich'];//module
-var rd = amlich.convertSolar2Lunar(dd,mm,yyyy,zone)
-return api.sendMessage(`Hiii, ${name} \n\n- Dương lịch: ${dd+1}/${mm}/${yyyy}\n📣Hôm nay là thứ mấy?\n📣Chắc chắn là (${day})\n`
-                      +`- Âm lịch: ${rd[0]}/${rd[1]}/${rd[2]}\n`
-                      +`- Thời gian: ${h}:${m}:${s}`
-                      +`\n`
-                      +`- Canh ngôn:\n`
-                      +`"${jsoncd.data[String(Math.floor(Math.random() * 268) + 1)]}"` , event.threadID, event.messageID)
+module.exports.run = async ({ api, event,args }) => {
+const axios = global.nodemodule["axios"];
+
+const res = await axios.get(`https://api.vangbanlanhat.tk/other?type=calendar`);
+var day = res.data.data.solar.day;
+var month = res.data.data.solar.month;
+var year = res.data.data.solar.year;
+var day1 = res.data.data.lunar.day;
+var month1 = res.data.data.lunar.month;
+var year1 = res.data.data.lunar.year;
+
+return api.sendMessage(`⚡️Dương lịch\n${day}/${month}/${year}\n⚡️Âm lịch\n${day1}/${month1}/${year1}`, event.threadID, event.messageID)
 }

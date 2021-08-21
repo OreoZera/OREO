@@ -4,7 +4,7 @@
 	hasPermssion: 0,
 	credits: "Jukie - Mod by CallmeSun",
 	description: "Tỉ lệ có Ny của bạn trong năm nay",
-	commandCategory: "Giải trí", 
+	commandCategory: "Tiện ích", 
 	usages: "", 
 	cooldowns: 0,
 	dependencies: {
