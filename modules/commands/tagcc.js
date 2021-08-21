@@ -1,22 +1,24 @@
-﻿ module.exports.config = {
-  name: "tagcc",
-  version: "1.0.0-beta-fixbyDungUwU",
-  hasPermssion: 0,
-  credits: "ZyrosGenZ-fixbyDungUwU",
-  description: "Bot sẽ rep ng tag admin hoặc rep ng tagbot ",
-  commandCategory: "cut",
-  usages: "",
-  cooldowns: 1
+module.exports.config = {
+name: "tagcc",
+ version: "1.0.1",
+ hasPermssion: 0,
+ credit: "CallmeSun",
+ description: "Tag adm thì ăn đấm nha",
+ commandCategory: "noprefix",
+ usages: "",
+ cooldowns: 5,
 };
- module.exports.event = function({ api, event }) {
-  if (event.senderID !== "100049098961526") {//id bot
-    var aid = ["100017608866967","100049098961526"];//id admin(s)
-    for (const id of aid) {
-    if ( Object.keys(event.mentions) == id) {
-      var msg = ["Adm đang ẻ, đợi xíu!!!","Tag cqq, ban mày à nha😼","Tag cc gì, đấm cho giờ-.-"];
-      return api.sendMessage({body: msg[Math.floor(Math.random()*msg.length)]}, event.threadID, event.messageID);
-    }
-    }}
-};
- module.exports.run = async function({}) {
+module.exports.handleEvent = function({ api, event }) {
+ var { threadID, messageID } = event;
+        var tl = ["tag tag cc","tag làm gì","tag nữa ăn đấm","tag tag cl"];
+        var rand = tl[Math.floor(Math.random() * tl.length)];
+ if (event.body.indexOf("@Le Thanh Thien")==0 || (event.body.indexOf("@Ngọc Nhi")==0)) {         //thay tên vào
+  var msg = {
+    body: rand
+   }
+   return api.sendMessage(msg, threadID, messageID);
   }
+ }
+ module.exports.run = function({ api, event, client, __GLOBAL }) {
+
+}
