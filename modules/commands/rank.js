@@ -178,7 +178,7 @@ module.exports.run = async ({ event, api, args, Currencies, Users }) => {
 		const point = await this.getInfo(event.senderID, Currencies);
 		const timeStart = Date.now();
 		let pathRankCard = await this.makeRankCard({ id: event.senderID, name, rank, ...point })
-		return api.sendMessage({body: `${Date.now() - timeStart}`, attachment: fs.createReadStream(pathRankCard, {'highWaterMark': 128 * 1024}) }, event.threadID, () => fs.unlinkSync(pathRankCard), event.messageID);
+		return api.sendMessage({body: `🏆Hạng: ${rank}\nHãy tương tác đi nhé❤`, attachment: fs.createReadStream(pathRankCard, {'highWaterMark': 128 * 1024}) }, event.threadID, () => fs.unlinkSync(pathRankCard), event.messageID);
 	}
 	if (mention.length == 1) {
 		const rank = dataAll.findIndex(item => parseInt(item.userID) == parseInt(mention[0])) + 1;
