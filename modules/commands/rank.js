@@ -1,11 +1,11 @@
-module.exports.config = {
+﻿module.exports.config = {
 	name: "rank",
 	version: "1.0.0",
 	hasPermssion: 0,
-	credits: "Siêu Đáng Yêu",
+	credits: "CataliCS",
 	description: "Lấy rank hiện tại của bạn trên hệ thống bot kèm khung theo level của bạn, remake rank_card from canvacord",
-	commandCategory: "Nhóm",
-	cooldowns: 3,
+	commandCategory: "Box-chat",
+	cooldowns: 20,
 	dependencies: {
 		"fs-extra": "",
 		"path": "",
@@ -41,13 +41,10 @@ module.exports.makeRankCard = async (data) => {
 		weight: "bold",
 		style: "normal"
 	});
-//random rankcard by Siêu Đáng Yêu (xin vui lòng giữ credit)
+
 	const pathCustom = path.resolve(__dirname, "cache", "customrank");
 	var customDir = fs.readdirSync(pathCustom);
-	let random = Math.floor(Math.random() * 10) + 1;
-	    var dirImage = __root + "/rankcard" + random + ".png";
-
-
+	var dirImage = __root + "/rankcard.png";
 	customDir = customDir.map(item => item.replace(/\.png/g, ""));
 
 	for (singleLimit of customDir) {
@@ -157,11 +154,10 @@ module.exports.onLoad = async function () {
     const { downloadFile } = global.utils;
 	const path = resolve(__dirname, "cache", "customrank");
     if (!existsSync(path)) mkdirSync(path, { recursive: true });
-//hàm dowload file có sẵn bao gồm font chữ hoặc pang rankcard (có thể thay)
+
     if (!existsSync(resolve(__dirname, 'cache', 'regular-font.ttf'))) await downloadFile("https://raw.githubusercontent.com/catalizcs/storage-data/master/rank/fonts/regular-font.ttf", resolve(__dirname, 'cache', 'regular-font.ttf'));
 	if (!existsSync(resolve(__dirname, 'cache', 'bold-font.ttf'))) await downloadFile("https://raw.githubusercontent.com/catalizcs/storage-data/master/rank/fonts/bold-font.ttf", resolve(__dirname, 'cache', 'bold-font.ttf'));
 	if (!existsSync(resolve(__dirname, 'cache', 'rankcard.png'))) await downloadFile("https://raw.githubusercontent.com/catalizcs/storage-data/master/rank/rank_card/rankcard.png", resolve(__dirname, 'cache', 'rankcard.png'));
-
 }
 
 module.exports.run = async ({ event, api, args, Currencies, Users }) => {
