@@ -2,7 +2,7 @@
     name: "khoamom",
     version: "1.0.5",
     hasPermssion: 0,
-    credits: "CallmeSun - Fix",
+    credits: "Zyros - Fix by CallmeSun",
     description: "",
     commandCategory: "Admin",
     usages: "add [từ ngữ]",
