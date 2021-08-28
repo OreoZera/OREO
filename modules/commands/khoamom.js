@@ -2,7 +2,7 @@
     name: "khoamom",
     version: "1.0.5",
     hasPermssion: 0,
-    credits: "CallmeeSun - Fix",
+    credits: "CallmeSun - Fix",
     description: "",
     commandCategory: "Admin",
     usages: "add [từ ngữ]",
