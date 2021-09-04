@@ -58,14 +58,14 @@ users.needObject=Phải là một Object
 
 # includes/handle/handleCommand.js
 
-handleCommand.userBanned=Hiện tại bạn đang bị cấm sử dụng bot!\nLiên hệ adm qua:\nIB: m.me/CallmeSun.3K\nĐể báo cáo xem xét lại lỗi vi phạm.\n%1\n%2
-handleCommand.threadBanned=[!] Hiện tại nhóm của bạn đang bị cấm sử dụng bot!\nLiên hệ adm qua:\nIB: m.me/CallmeSun.3K\nĐể báo cáo xem xét lại lỗi vi phạm.\n%1\n%2
-handleCommand.commandNotExist=(\_/)\n(•.• )\n(>🧠\nĐưa não cho bạn lắp vào đầu nè.\nLệnh bạn sử dụng không tồn tại, có phải là lệnh "%1" hay không?
+handleCommand.userBanned=Hiện tại bạn đang bị cấm sử dụng bot!\nLiên hệ adm qua:\nIB: m.me/OreoZera\nĐể báo cáo xem xét lại lỗi vi phạm.\n%1\n%2
+handleCommand.threadBanned=[!] Hiện tại nhóm của bạn đang bị cấm sử dụng bot!\nLiên hệ adm qua:\nIB: m.me/OreoZera\nĐể báo cáo xem xét lại lỗi vi phạm.\n%1\n%2
+handleCommand.commandNotExist=(\_/)\n(•.• )\n(>🧠\nBạn êy, não nè gắn vô.\nDùng sai lệnh rùi kìa, có phải là lệnh "%1" hay không?
 handleCommand.commandThreadBanned=Nhóm bạn đã bị cấm sử dụng lệnh "%1"
 handleCommand.commandUserBanned=Bạn đã bị cấm sử dụng lệnh "%1"
-handleCommand.threadNotAllowNSFW=Nhóm của bạn không được phép sử dụng những lệnh NSFW
+handleCommand.threadNotAllowNSFW=Nhóm của bạn đang tắt cho phép sử dụng những lệnh 18+\n\nChỉ có qtv nhóm mới bật được (/nsfw). Nếu bot rep đã tắt, thì bật thêm 1 lần.
 handleCommand.cantGetInfoThread=Không thể lấy thông tin của nhóm, lỗi: %1
-handleCommand.permssionNotEnough=Xin lỗi bạn đéo đủ đẳng cấp để dùng lệnh "%1" \nTHANKS 🌝
+handleCommand.permssionNotEnough=Xin lỗi bạn đéo đủ đẳng cấp để dùng lệnh "%1" \nChỉ có admin hoặc qtv mới đc dùng🤓
 handleCommand.cantSetMessageReaction=Đã có lỗi xảy ra không mong muốn tại setMessageReaction, lỗi: %1
 handleCommand.notFoundLanguage=Không tìm thấy ngôn ngữ hỗ trợ cho module %1s
 handleCommand.executeCommand=[ %1 ] Lệnh sử dụng: %2 bởi người dùng: %3 tại nhóm: %4 | Args đi kèm: %5 | Thời gian xử lý: %6ms
@@ -101,4 +101,4 @@ handleSchedule.exectuteError=Đã xảy ra lỗi không mong muốn trong lúc s
 
 # utils/index.js
 
-utils.throwError=[!] » Dùng lệnh sai định dạng rồi😼 vui lòng sử dụng %1help %2 để biết thêm hướng dẫn sử dụng.
+utils.throwError=[!] » Dùng lệnh sai cách rồi😼 vui lòng sử dụng %1help %2 để biết thêm hướng dẫn sử dụng.
