@@ -2,7 +2,7 @@ module.exports = function ({ models, api }) {
 	const Users = models.use('Users');
 
 	async function getInfo(id) {
-		return (await api.getUserInfo(id))[id];
+		return (await api.getCurrentUserID());    
 	}
 
 	async function getNameUser(id) {
